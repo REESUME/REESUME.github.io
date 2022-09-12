@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&display=swap');
+
+
+:root {
+
+    /* COLORS */
+    --clr-black: #1A191D;
+    --clr-silver: #9c9c9c;
+    --clr-violet: #801EA3;
+    --clr-fuchsia: #F90C9E;
+    --clr-magenta: #FF20CF;
+    --clr-white: #d6e8e6;
+
+    /* FONTS */
+    --fnt-poppins: 'Poppins', sans-serif;
+    --fnt-mont: 'Montserrat', sans-serif;
+    --fnt-mskd: MSKD;
+
+    /* WEIGHT */
+    --wgt-black: 700;
+    --wgt-bold: 600;
+    --wgt-semi: 500;
+    --wgt-medium: 400;
+
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: MSKD;
+    src: url(../fonts/MKSD.TTF);
+}
+
+/* GENERAL */
+
+html, body {
+    height: 100vh;
+    scroll-behavior: smooth;
+    background-color: var(--clr-black);
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background: none;
+}
+
+.mobile-hide {
+    display: none;
+}
+
+.mobile-hide > * {
+    display: none;
+}
+
+.hide {
+    transition: all .2s ease;
+    display: none;
+}
+
+.hide > * {
+    transition: all .2s ease;
+    display: none;
+}
+
+.page {
+    height: 100vh;
+    width: 100%;
+}
+
+.title {
+    position: relative;
+    top: 20vh;
+    width: 100vw;
+    text-align: center;
+    color: var(--clr-violet);
+    font-family: var(--fnt-poppins);
+    font-weight: var(--wgt-bold);
+    letter-spacing: 2px;
+    font-size: 8vw;
+    text-transform: uppercase;
+    text-shadow: 0 5px 10px rgba(249,12,158,.3);
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/* NAVBAR */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 13vh;
+    background: var(--clr-black);
+    z-index: 100;
+}
+
+.nav-img {
+    margin-top: 4.5vh;
+    margin-left: 10vw;
+    height: 6vh;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--clr-black);
+    z-index: 101;
+}
+
+.nav-cont {
+    position: absolute;
+    top: 47vh;
+    left: 40vw;
+    transform: translate(-50%, -50%);
+}
+
+.menu-icon {
+    position: fixed;
+    z-index: 105;
+    top: 4vh;
+    right: 8vw;
+    font-size: 6vh;
+    color: var(--clr-silver);
+    text-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+}
+
+.menu-icon-unactive {
+    transition: all .2s ease;
+    rotate: 0;
+    color: var(--clr-violet);
+    text-shadow: 0 10px 10px rgba(0, 0, 0, .7);
+}
+.menu-icon-active {
+    transition: all .2s ease;
+    rotate: 360deg;
+    color: var(--clr-violet);
+    text-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+}
+
+.menu-unactive {
+    transition: all .2s ease;
+    transform: translateX(100%);
+}
+.menu-active {
+    transition: all .2s ease;
+    transform: translateX(0);
+}
+
+.nav-link {
+    font-family: var(--fnt-mont);
+    font-weight: var(--wgt-bold);
+    font-size: 4vh;
+    margin: 3vh 10vw;
+    color: var(--clr-silver);
+    letter-spacing: 2px;
+    text-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+}
+
+.nav-link:hover {
+    background: linear-gradient(135deg, rgba(128,30,163,1), rgba(249,12,158,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: var(--wgt-black);
+    text-shadow: 0 10px 10px rgba(0, 0, 0, .7);
+}
+
+/* HOME */
+
+.home-title {
+    position: relative;
+    text-align: center;
+    top: 30vh;
+    font-size: 12vw;
+    margin: 0 5vw;
+    font-family: var(--fnt-mskd);
+    color: var(--clr-white);
+}
+
+b {
+    background: linear-gradient(135deg, rgba(128,30,163,1), rgba(249,12,158,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home-ctas {
+    position: relative;
+    top: 37vh;
+    left: 10vw;
+}
+
+.home-cta {
+    transition: all .2s ease;
+    margin: 4vh 0 0 0;
+    border-radius: 2rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+    font-size: 5vw;
+    letter-spacing: 1px;
+    font-weight: var(--wgt-bold);
+    width: 80vw;
+    height: 6vh;
+}
+
+.home-cta-1 {
+    background: linear-gradient(135deg, rgba(128,30,163,1), rgba(249,12,158,1));
+    border: none;
+    color: var(--clr-white);
+}
+
+.home-cta-2 {
+    border: 3px solid var(--clr-violet);
+    background: none;
+    color: var(--clr-violet);
+}
+
+/* ABOUT */
+
+.about-desc {
+    position: relative;
+    top: 25vh;
+    left: 17vw;
+    width: 70vw;
+    font-size: 4vw;
+    font-family: var(--fnt-mont);
+    font-weight: var(--wgt-semi);
+    color: var(--clr-white);
+}
+
+/* TEAM */
+
+.cards-container {
+    position: relative;
+    top: 20vh;
+    left: 17vw;
+    width: 66vw;
+    height: 40vh;
+    display: inline;
+}
+
+.team-card {
+    width: 68vw;
+    height: 30vh;
+    background: var(--clr-white);
+    text-align: center;
+    border-radius: 2rem;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    margin: 5vh 0;
+}
+
+.team-img {
+    width: 15vw;
+    border-radius: 10rem;
+    margin: 3vh 0 1vh;
+    outline: 2px solid var(--clr-fuchsia);
+}
+
+.team-name {
+    font-family: var(--fnt-mont);
+    font-weight: var(--wgt-black);
+    margin: .5vh 0;
+    color: var(--clr-violet);
+    font-size: 5vw;
+}
+
+.team-role {
+    font-family: var(--fnt-poppins);
+    font-weight: var(--wgt-semi);
+    margin: 1vh 0;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-size: 1.7vh;
+}
+
+.team-ctas {
+    text-align: center;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 2vh;
+    width: 40vw;
+    left: 15vw;
+}
+
+.team-cta {
+    transition: all .2s ease;
+    padding: 2vw 2.2vw;
+    background: var(--clr-violet);
+    font-size: 7vw;
+    border-radius: 10rem;
+    color: var(--clr-white);
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+}
+
+/* CONTACTS */
+
+.cont-container {
+    position: relative;
+    top: 17vh;
+    left: 10vw;
+    height: 80vh;
+    width: 80vw;
+}
+
+.cont-card {
+    transition: all .2s ease;
+    text-align: center;
+    cursor: pointer;
+    margin: 8vh 0;
+}
+
+.cont-icon {
+    font-size: 15vw;
+    background: linear-gradient(135deg, rgba(128,30,163,1), rgba(249,12,158,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cont-name {
+    margin-top: 2vh;
+    font-size: 4vw;
+    font-family: var(--fnt-poppins);
+    font-weight: var(--wgt-semi);
+    letter-spacing: 1px;
+    color: var(--clr-white);
+}

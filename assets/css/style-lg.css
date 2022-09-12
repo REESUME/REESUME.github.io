@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&display=swap');
+
+
+:root {
+
+    /* COLORS */
+    --clr-black: #1A191D;
+    --clr-silver: #9c9c9c;
+    --clr-violet: #801EA3;
+    --clr-fuchsia: #F90C9E;
+    --clr-magenta: #FF20CF;
+    --clr-white: #d6e8e6;
+
+    /* FONTS */
+    --fnt-poppins: 'Poppins', sans-serif;
+    --fnt-mont: 'Montserrat', sans-serif;
+    --fnt-mskd: MSKD;
+
+    /* WEIGHT */
+    --wgt-black: 700;
+    --wgt-bold: 600;
+    --wgt-semi: 500;
+    --wgt-medium: 400;
+
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: MSKD;
+    src: url(../fonts/MKSD.TTF);
+}
+
+/* GENERAL */
+
+html, body {
+    height: 100vh;
+    scroll-behavior: smooth;
+    background-color: var(--clr-black);
+    overflow-x: hidden;
+    
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background: none;
+}
+
+.desktop-hide {
+    display: none !important;
+}
+
+.desktop-hide > * {
+    display: none !important;
+}
+
+.hide {
+    transition: all .2s ease;
+    display: none;
+}
+
+.hide > * {
+    transition: all .2s ease;
+    display: none;
+}
+
+.page {
+    height: 100vh;
+    width: 100%;
+}
+
+.title {
+    position: relative;
+    top: 25vh;
+    left: 17vw;
+    color: var(--clr-violet);
+    font-family: var(--fnt-poppins);
+    font-weight: var(--wgt-bold);
+    letter-spacing: 2px;
+    font-size: 2.5vw;
+    text-transform: uppercase;
+    text-shadow: 0 5px 10px rgba(249,12,158,.3);
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/* NAVBAR */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 20vh;
+    background: var(--clr-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fnt-mont);
+    font-weight: var(--wgt-bold);
+    z-index: 100;
+}
+
+.navbar > nav {
+    display: flex;
+    width: 70vw;
+    justify-content: space-around;
+}
+
+.nav-img {
+    height: 5vh;
+    margin: 0 3vw;
+}
+
+.nav-link {
+    transition: all .2s ease;
+    color: var(--clr-silver);
+    text-decoration: none;
+    font-size: 1.6vw;
+    letter-spacing: 1px;
+    text-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+}
+
+.nav-link:hover {
+    transition: all .2s ease;
+    text-shadow: 0 10px 10px rgba(0, 0, 0, .7);
+    transform: translateY(-1px);
+    background: linear-gradient(135deg, rgba(128,30,163,1), rgba(249,12,158,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* HOME */
+
+.home-img {
+    position: relative;
+    top: 25vh;
+    width: 4vw;
+    left: 48vw;
+}
+
+.home-title {
+    position: relative;
+    text-align: center;
+    top: 30vh;
+    font-size: 4vw;
+    margin: 0 15vw;
+    font-family: var(--fnt-mskd);
+    color: var(--clr-white);
+}
+
+b {
+    background: linear-gradient(135deg, rgba(128,30,163,1), rgba(249,12,158,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home-ctas {
+    position: relative;
+    top: 37vh;
+    left: 39vw;
+}
+
+.home-cta {
+    transition: all .2s ease;
+    padding: 2vh 2vw;
+    margin: 0 2vw 0 0;
+    border-radius: 2rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+    font-size: 1.3vw;
+    letter-spacing: 1px;
+    font-weight: var(--wgt-bold);
+}
+
+.home-cta:hover {
+    transition: all .2s ease;
+    cursor: pointer;
+    transform: translate(-1px, -1px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .7);
+}
+
+.home-cta-1 {
+    background: linear-gradient(135deg, rgba(128,30,163,1), rgba(249,12,158,1));
+    border: none;
+    color: var(--clr-white);
+}
+
+.home-cta-2 {
+    border: 3px solid var(--clr-violet);
+    background: none;
+    color: var(--clr-violet);
+}
+
+/* ABOUT */
+
+.about-desc {
+    position: relative;
+    top: 32vh;
+    left: 17vw;
+    width: 66vw;
+    font-size: 1.5vw;
+    font-family: var(--fnt-mont);
+    font-weight: var(--wgt-semi);
+    color: var(--clr-white);
+}
+
+/* TEAM */
+
+.cards-container {
+    position: relative;
+    top: 30vh;
+    left: 17vw;
+    width: 66vw;
+    height: 40vh;
+    display: inline;
+}
+
+.team-card {
+    float: left;
+    width: 18vw;
+    height: 50vh;
+    background: var(--clr-white);
+    text-align: center;
+    border-radius: 2rem;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    margin: 0 3vw;
+}
+
+.team-img {
+    width: 6.5vw;
+    border-radius: 10rem;
+    margin: 3vh 0;
+    outline: 2px solid var(--clr-fuchsia);
+}
+
+.team-name {
+    font-family: var(--fnt-mont);
+    font-weight: var(--wgt-black);
+    margin: 1vh 0;
+    color: var(--clr-violet);
+    font-size: 1.5vw;
+}
+
+.team-role {
+    font-family: var(--fnt-poppins);
+    font-weight: var(--wgt-semi);
+    margin: 2vh 0;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.team-ctas {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 2vw;
+    margin-top: 5vh;
+}
+
+.team-cta {
+    transition: all .2s ease;
+    padding: .7vw .8vw;
+    background: var(--clr-violet);
+    font-size: 2.2vw;
+    border-radius: 10rem;
+    color: var(--clr-white);
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+}
+
+.team-cta:hover {
+    transition: all .2s ease;
+    transform: translate(-1px, -1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .7);
+}
+
+/* CONTACTS */
+
+.cont-container {
+    position: relative;
+    top: 43vh;
+    left: 10vw;
+    height: 40vh;
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cont-card {
+    transition: all .2s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cont-card:hover {
+    transition: all .2s ease;
+    transform: translateY(-2px);
+}
+
+.cont-icon {
+    font-size: 7vw;
+    background: linear-gradient(135deg, rgba(128,30,163,1), rgba(249,12,158,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cont-name {
+    margin-top: 2vh;
+    font-size: 1.2vw;
+    font-family: var(--fnt-poppins);
+    font-weight: var(--wgt-bold);
+    letter-spacing: 1px;
+    color: var(--clr-white);
+}
+
+/* PROJECTS */
+
+.warn {
+    text-align: center;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    font-family: var(--fnt-mont);
+    font-weight: var(--wgt-semi);
+    font-size: 3vw;
+    color: var(--clr-silver);
+    text-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+}
